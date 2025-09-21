@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HishamMohamed-Alashi | Portfolio</title>
+<style>
+/* Reset & Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f6f0fa;
+  color: #4a306d;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  background-color: #b48cd6;
+  padding: 1rem;
+  top: 0;
+  z-index: 1000;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.navbar li {
+  margin: 0 15px;
+}
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.navbar a:hover {
+  color: #ffe0ff;
+}
+
+/* Section Spacing */
+section {
+  text-align: center;
+}
+
+/* Video Section */
+.video-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  background: rgba(180, 140, 214, 0.7);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+/* Centered Image with Filter */
+.centered-image-section {
+  text-align: center;
+  margin-top: 40px;
+}
+.profile-image {
+  width: 250px;
+  border-radius: 50%;
+  filter: grayscale(30%) brightness(90%);
+  transition: filter 0.3s;
+}
+.profile-image:hover {
+  filter: none;
+}
+
+/* Text over Image */
+.text-over-image {
+  position: relative;
+  margin-top: 60px;
+}
+.text-over-image img {
+  width: 100%;
+  height: auto;
+}
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2.5rem;
+  background-color: rgba(100, 70, 140, 0.6);
+  padding: 15px 30px;
+  border-radius: 10px;
+}
+
+/* Table Styling */
+.table-section table {
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+}
+.table-section th, td {
+  border: 1px solid #a87edb;
+  padding: 10px;
+}
+.table-section th {
+  background-color: #d9b3ff;
+}
+
+/* Two Column Layout */
+.columns {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 40px;
+}
+.column {
+  width: 40%;
+  height: 200px;
+  background-color: #e9d8ff;
+  color: #4a306d;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Paragraph Hover Effect */
+.hover-para p {
+  font-size: 1.2rem;
+  margin-top: 30px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.hover-para p:hover {
+  color: #7e4bb2;
+  transform: scale(1.05);
+}
+
+/* Image Overlay Fade */
+.image-overlay-section .image-container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+}
+.image-overlay-section img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+.overlay-text {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(180, 140, 214, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+.image-container:hover .overlay-text {
+  opacity: 1;
+}
+
+/* Footer */
+footer {
+  background-color: #b48cd6;
+  padding: 20px 0;
+}
+footer p {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+</style>
+
+</head>
+<body>
+
+  <!-- Fixed Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section with Autoplaying Video -->
+  <section id="home">
+    <div class="video-container">
+      <video autoplay muted loop>
+        <source src="https://cdn.pixabay.com/video/2021/02/18/65562-515098354_tiny.mp4" type="video/mp4" />
+      </video>
+      <div class="video-text">Welcome to Hisham's World</div>
+    </div>
+  </section>
+
+  <!-- Profile Image with Effects -->
+  <section class="centered-image-section">
+    <img src="https://cdn.pixabay.com/photo/2025/08/02/14/53/pied-cuckoo-9750790_1280.jpg" class="profile-image" alt="Hisham Profile" />
+  </section>
+
+  <!-- Text over Background Image -->
+  <section class="text-over-image">
+    <img src="https://cdn.pixabay.com/photo/2025/08/07/19/57/mountain-9761503_1280.jpg" alt="Background" />
+    <div class="text-overlay">Creative Coder & Student</div>
+  </section>
+
+  <!-- Table Section -->
+  <section class="table-section">
+    <h2>Skills</h2>
+    <table>
+      <tr>
+        <th>Skill</th>
+        <th>Proficiency</th>
+      </tr>
+      <tr>
+        <td>Microsoft Office</td>
+        <td>Advanced</td>
+      </tr>
+      <tr>
+        <td>HTML</td>
+        <td>Intermediate</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+        <td>Beginner</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Two Column Layout -->
+  <section class="columns">
+    <div class="column">
+      <h3>Education</h3>
+      <p>Currently studying web development.</p>
+    </div>
+    <div class="column">
+      <h3>Interests</h3>
+      <p>I love tech, music, photography.</p>
+    </div>
+  </section>
+
+  <!-- Paragraph Hover -->
+  <section class="hover-para">
+    <p>Hover over this paragraph </p>
+  </section>
+
+  <!-- Image Overlay Fade -->
+  <section class="image-overlay-section">
+    <div class="image-container">
+      <img src="https://cdn.pixabay.com/photo/2025/08/08/16/47/nature-9763046_1280.jpg" alt="Overlay Example" />
+      <div class="overlay-text">This is an image overlay</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 HishamMohamed-Alashi. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
